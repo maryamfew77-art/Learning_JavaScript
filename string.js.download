@@ -1,0 +1,113 @@
+  // learning java script : string methods
+
+// topic1: toUpperCase()
+// This method converts every letter in a string to UPPERCASE (capital letters).
+// It does not change numbers or symbols — only letters are affected.
+let name = "javascript";
+let result1 = name.toUpperCase();
+console.log(result1);
+//Output: JAVASCRIPT
+
+/*----------------------------*/ 
+
+//topic2: toLowerCase()
+//This method converts every letter in a string to lowercase (small letters). Numbers and symbols remain unchanged.
+//Syntax : string.toLowerCase()
+let email1 = "USER@GMAIL.COM";
+let result2 = email1.toLowerCase();
+console.log(result2);
+//Output: user@gmail.com
+
+
+ /*----------------------------*/ 
+
+ //topic3: trim()
+//This method removes extra spaces (whitespace) from the beginning and end of a string.
+//  Spaces in the middle of the string are NOT removed.
+//Syntax: string.toLowerCase()
+let input1 = "   Hello World   ";
+let result3 = input1.trim();
+console.log(result3);
+console.log(result3.length);
+//Output: Hello World 
+
+/*----------------------------*/ 
+
+//topic4:slice()
+//This method extracts (cuts out) a part of a string and returns it. 
+// You tell it where to start and where to stop. The original string is not changed.
+//Syntax: string.trim()
+let text = "Hello World";
+let result4 = text.slice(0, 5);
+console.log(result4);
+//Output: Hello
+
+/*----------------------------*/ 
+
+// topic5:substring()
+//Similar to slice(), this method extracts part of a string between two index positions.
+//  The main difference: it does not support negative index values.
+//Syntax: string.slice(startIndex, endIndex)
+let email2 = "john@gmail.com";
+let username = email2.substring(0, 4);
+console.log(username);
+//Output: john
+
+// /*----------------------------*/
+
+//topic6:replace()
+//This method finds a specific word or character in a string and replaces it with something else.
+//  By default, it only replaces the FIRST occurrence.
+//Syntax: string.replace(searchValue, newValue)
+let message1 = "Hello World";
+let result5 = message1.replace("World", "Pakistan");
+console.log(result5);
+//Output: Hello Pakistan
+
+/*----------------------------*/
+
+//topic7:includes()
+//This method checks whether a string contains a specific word or character.
+//  It returns true if found, false if not found.
+//Syntax: string.includes(searchValue)
+let sentence1 = "I love JavaScript";
+console.log(sentence1.includes("JavaScript"));
+console.log(sentence1.includes("Python"));
+//Output:true false
+
+/*----------------------------*/
+
+//topic8:indexOf()
+//This method tells you the position (index) where a specific character or word first appears in a string.
+//  If it is not found, it returns -1.
+//Syntax: string.indexOf(searchValue)
+let text1 = "Hello World";
+let pos = text1.indexOf("World");
+console.log(pos);
+console.log(text1.indexOf("xyz"));
+//Output: 6 -1
+
+/*----------------------------*/
+
+//topic9:split()
+//This method splits a string into an array of smaller strings, using a separator you choose 
+// (like a space, comma, or letter). The original string is not changed.
+//Syntax :string.split(separator)
+let sentence2 = "apple,banana,mango";
+let fruits = sentence2.split(",");
+console.log(fruits);
+//Output: ["apple", "banana", "mango"]
+
+/*----------------------------*/
+
+//topic10:concat()
+//This method joins two or more strings together and returns a new combined string.
+//  It works like the + operator for strings.
+//Syntax: string1.concat(string2, string3, ...)
+let firstName = "Ahmed";
+let lastName = "Khan";
+let fullName = firstName.concat(" ", lastName);
+console.log(fullName);
+//Output: Ahmed Khan
+
+/*----------------------------*/
