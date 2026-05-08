@@ -1,0 +1,108 @@
+// Topic: Java Script Numbers
+
+//# Method #1: `toString()` 🔢
+//`toString()` converts a number into a string. It's useful when you need to display a number as text,
+//like showing a price tag or score on screen.
+let score = 95;
+let scoreText = score.toString();
+console.log(scoreText);        // "95"
+console.log(typeof scoreText); // "string"
+
+//---
+
+//# Method #2 of 10: `toFixed()`
+//`toFixed()` rounds a number to a specific number of decimal places.
+//  It's super handy for working with prices or currency!
+let price = 19.5678;
+let fixedPrice = price.toFixed(2);
+console.log(fixedPrice); // "19.57"
+
+//---
+
+//# Method #3 of 10: `toPrecision()`
+//`toPrecision()` formats a number to a specified **total number of digits** (not just decimals).
+//  Great for displaying measurements or scientific data!
+
+let distance = 123.456;
+let result = distance.toPrecision(4);
+
+console.log(result); // "123.5"
+
+//---
+
+//# Method #4 of 10: `valueOf()`
+//`valueOf()` returns the **primitive number value** of a number object. 
+// JavaScript uses it internally, but it's good to know!
+let points = new Number(500);
+let result1 = points.valueOf();
+
+console.log(result);        // 500
+console.log(typeof result1); // "number"
+
+//---
+//# Method #5 of 10: `Number()`
+//`Number()` converts other data types (like strings or booleans) **into a number**.
+//  Super useful when handling user input!
+
+let userInput = "42.50";
+let price1 = Number(userInput);
+
+console.log(price1);        // 42.50
+console.log(typeof price1); // "number"
+
+//---
+
+//# Method #6 of 10: `parseInt()`
+//`parseInt()` converts a string into a **whole number**, 
+// stripping out any decimals or text after the number. 
+// Perfect for working with ages, quantities, or anything that needs to be a whole number!
+let userAge = "25.9 years";
+let age = parseInt(userAge);
+
+console.log(age); // 25
+
+//---
+
+//# Method #7 of 10: `parseFloat()`
+
+//`parseFloat()` converts a string into a **decimal number**, keeping the decimal points unlike `parseInt()`.
+//  Great for prices, temperatures, or precise measurements!
+let temp = "36.6°C";
+let temperature = parseFloat(temp);
+
+console.log(temperature); // 36.6
+
+//---
+
+//# Method #8: `isInteger()` 🔢
+//`Number.isInteger()` checks if a value is a whole number (no decimals). It returns `true` or `false`.
+let score1 = 95;
+let avgScore = 95.7;
+
+console.log(Number.isInteger(score1));    // true
+console.log(Number.isInteger(avgScore)); // false
+
+//---
+
+//# Method #9: `isFinite()` ♾️
+//`Number.isFinite()` checks if a value is a valid finite number.
+//It returns `true` for normal numbers and `false` for Infinity, -Infinity, or non-numbers.
+
+let price2 = 500;
+let result2 = Infinity;
+
+console.log(Number.isFinite(price2));  // true
+console.log(Number.isFinite(result2)); // false
+
+//---
+
+//# Method #10: `isNaN()` 🚫
+//`Number.isNaN()` checks if a value is NaN (Not a Number).
+//It returns `true` if the value is NaN, otherwise `false`.
+
+let total = NaN;
+let marks = 90;
+
+console.log(Number.isNaN(total)); 
+
+//---
